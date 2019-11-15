@@ -1,0 +1,9 @@
+.wrap{
+	width: 960px;
+	margin: 250px auto;
+	outline: 1px solid green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
