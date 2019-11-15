@@ -21,4 +21,6 @@ var appData = {
 	appData.expenses[q1] = q2;
 	appData.expenses[q3] = q4;
 
-	alert(appData.moneyPerDay);
+ 
+  appData.moneyPerDay = (appData.butget / 30).toFixed(1);
+	alert('Ежедневный бюджет ' + appData.moneyPerDay);
