@@ -86,17 +86,18 @@ optionalExpensesBtn.addEventListener('click', function () {
     } else {
       console.log('что-то пошло не так');
     };
+
     optionalExpensesValue.textContent += appData.optionalExpenses[i] + ' ';
 
   };
 });
 
+
+//moneyPerDay
 countBudgetBtn.addEventListener('click', function () {
   if (appData.butget != undefined) {
 	appData.moneyPerDay = ((appData.butget - sum) /30).toFixed(1);
 
-
-    //appData.moneyPerDay = (appData.butget / 30).toFixed(1);
     daybudgetValue.textContent = appData.moneyPerDay;
 
     if (appData.moneyPerDay < 100) {
@@ -116,6 +117,7 @@ countBudgetBtn.addEventListener('click', function () {
   }
 
 });
+
 
 chooseIncome.addEventListener('input', function () {
   var items = chooseIncome.value;
@@ -176,3 +178,7 @@ var appData = {
   savings: false,
   optionalExpenses: {}
 };
+
+// for (var key in appData) {
+//   alert('Наша программа включает в себя данные: ' + key + ' ' + appData[key]);
+// }
