@@ -259,6 +259,43 @@ window.addEventListener('DOMContentLoaded', function () {
 
   });
 
+  // 7 calc
+
+  let persons = document.querySelectorAll('.counter-block-input')[0],
+      restDay = document.querySelectorAll('.counter-block-input')[1],
+      place = document.getElementById('select'),
+      totalValue = document.getElementById('total'),
+      personSum = 0,
+      daySum = 0,
+      total = 0;
+      
+      totalValue.innerHTML = 0;
+
+      persons.addEventListener('change', function(){
+        personSum = +this.value;
+        total = (personSum + daySum) * 100;
+        
+        if(restDay.value == ''){
+          totalValue.innerHTML = 0;
+        }else{
+          totalValue.innerHTML = total;
+        }
+      });
+
+      restDay.addEventListener('change', function(){
+        restDay = +this.value;
+        total = (personSum + daySum) * 100;
+        
+        if(persons.value = ''){
+          totalValue.innerHTML = 0;
+        }else{
+          totalValue.innerHTML = total;
+        }
+      });
+
+
+
+
 
 
 
